@@ -1,0 +1,12 @@
+1.打开cmd
+2.安装npm webpack 
+  npm安装命令：npm install npm -g 或者使用 cnpm install npm -g
+  webpack安装命令：
+    全局安装 npm install -g webpack
+3.创建项目文件夹
+4.在cmd cd文件夹 安装webpack
+  webpack安装命令：
+    npm install webpack --save-dev
+5.安装各种loader
+  style-loader!css-loader: npm install style-loader css-loader --save-dev,
+  babel-loader: npm install babel-loader --save-dev
