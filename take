@@ -5,8 +5,9 @@
     全局安装 npm install -g webpack
 3.创建项目文件夹
 4.在cmd cd文件夹 安装webpack
-  webpack安装命令：
+    webpack安装命令：
     npm install webpack --save-dev
+    html-webpack-plugin安装:npm install html-webpack-plugin --save-dev
 5.安装各种loader
   style-loader!css-loader: npm install style-loader css-loader --save-dev,
   babel-loader与babel-core: npm install --save-dev babel-loader babel-core,
