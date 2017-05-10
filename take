@@ -9,7 +9,10 @@
     npm install webpack --save-dev
 5.安装各种loader
   style-loader!css-loader: npm install style-loader css-loader --save-dev,
-  babel-loader: npm install babel-loader --save-dev
+  babel-loader与babel-core: npm install --save-dev babel-loader babel-core,
+  postcss-loader:npm install postcss-loader --save-dev,
+  postcss-loader的插件autoprefixer:npm install autoprefixer --save-dev,
+  
   webpack常用的插件安装命令：
   1：npm install html-webpack-plugin --save-dev //自动快速的帮我们生成HTML。
   2：npm install css-loader style-loader --save-dev//样式文件，我们需要两种loader，css-loader 和 style－loader，css-loader会遍历css文件，找到所有的url(...)并且处理。style-loader会把所有的样式插入到你页面的一个style tag中。
