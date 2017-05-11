@@ -8,29 +8,53 @@
 安装WDS:npm install webpack-dev-server --save-dev,
 
 创建基础的配置文件:
-      const path = require('path');
-      const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-      const PATHS = {
-        app: path.join(__dirname, 'app'),
-        build: path.join(__dirname,'build'),
-      };
-
-      module.exports = {
+      var htmlWebpackPlugin = require('html-webpack-plugin');
 
 
-        entry:{
-          app: PATHS.app,
-        },
-        output:{
-          path: PATHS.build,
-          filename:'[name].js',
-        },
-        plugins:[
-          new HtmlWebpackPlugin({
-            title:"Webpack demo",
-          }),
-        ],
-      };
+module.exports = {
+	entry:"./src/app.js",
+	output:{
+		path: __dirname +'/dist',
+		filename:'js/[name].bundle.js',
+	},
 
+
+	module:{
+		rules:[
+	 		{
+	 		test:/\.js$/,
+	 		exclude: __dirname +"./node_modules/",
+			include:__dirname +"./src/",
+	 		use:[
+	 				{
+	 					loader:"babel-loader",			
+	 					options:{
+	 						presets:["es2015"]
+	 					}
+	 				}
+	 			]
+	 		},
+	 		{
+	 			test:/\.css$/,
+				use:[
+					{
+						loader:"style-loader"
+					},
+					{
+						loader:"css-loader"
+					}
+				]
+	 		}
+	 	],
+	},
+	plugins:[
+		new htmlWebpackPlugin({
+			filename:'index.html',
+			template:'index.html',
+			inject:"body",
+			title:"Hello , My name is Webpack",
+			date:new Date()
+		}),
+	]
+}
 
