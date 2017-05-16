@@ -1,13 +1,14 @@
 初始化项目:npm init -y,
 安装webpack:npm install webpack --save-dev,
 安装自动生成html插件:npm install html-webpack-plugin --save-dev,
-安装html-loader css-loader style-loader babel-loader babel-core babel-preset-es2015:
+安装html-loader css-loader style-loader file-loader babel-loader babel-core babel-preset-es2015:
       npm install html-loader --save-dev,
       npm install babel-loader css-loader style-loader --save-dev,
       npm install --save-dev babel-loader babel-core,
       npm install babel-preset-es2015,
       npm install postcss-loader --save-dev,
       npm install autoprefixer --save-dev,
+      npm install file-loader --save-dev
       如果要处理less与sass则要安装less-loader sass-loader:
       npm i less-loader --save-dev,
       npm i sass-loader --save-dev
@@ -23,7 +24,6 @@ module.exports = {
 		path: __dirname +'/dist',
 		filename:'js/[name].bundle.js',
 	},
-
 
 	module:{
 		rules:[
@@ -47,9 +47,21 @@ module.exports = {
 						loader:"style-loader"
 					},
 					{
-						loader:"css-loader"
+						loader:"css-loader",
+						options:{importLoaders:1}
+					},
+					{
+						loader:"postcss-loader"
 					}
 				]
+	 		},
+	 		{
+	 			test:/\.html/,
+	 			use:[
+	 				{
+	 					loader:"html-loader"
+	 				}
+	 			]
 	 		}
 	 	],
 	},
@@ -63,4 +75,3 @@ module.exports = {
 		}),
 	]
 }
-
