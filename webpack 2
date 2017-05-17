@@ -13,6 +13,7 @@
       如果要处理less与sass则要安装less-loader sass-loader:
       npm i less-loader --save-dev,
       npm i sass-loader --save-dev,
+      安装压缩的loader:npm install image-webpack-loader --save-dev,
       汇总:npm install html-loader css-loader style-loader file-loader url-loader babel-loader babel-core babel-preset-es2015 postcss-loader --save-dev
 安装WDS:npm install webpack-dev-server --save-dev,
 
