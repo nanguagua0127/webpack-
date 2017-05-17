@@ -8,11 +8,12 @@
       npm install babel-preset-es2015,
       npm install postcss-loader --save-dev,
       npm install autoprefixer --save-dev,
-      npm install file-loader --save-dev
+      npm install file-loader --save-dev,
+      npm install url-loader --save-dev,
       如果要处理less与sass则要安装less-loader sass-loader:
       npm i less-loader --save-dev,
       npm i sass-loader --save-dev,
-      汇总:npm install html-loader css-loader style-loader file-loader babel-loader babel-core babel-preset-es2015 postcss-loader --save-dev
+      汇总:npm install html-loader css-loader style-loader file-loader url-loader babel-loader babel-core babel-preset-es2015 postcss-loader --save-dev
 安装WDS:npm install webpack-dev-server --save-dev,
 
 创建基础的配置文件:
