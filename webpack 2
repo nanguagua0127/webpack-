@@ -1,5 +1,5 @@
 初始化项目:npm init -y,
-安装webpack:npm install webpack --save-dev,
+安装webpack:npm install --save-dev webpack,
 安装自动生成html插件:npm install html-webpack-plugin --save-dev,
 安装html-loader css-loader style-loader file-loader babel-loader babel-core babel-preset-es2015:
       npm install html-loader --save-dev,
